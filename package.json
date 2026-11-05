@@ -1,0 +1,16 @@
+{
+  "name": "arboalerta-go",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "importar": "node 02_importar_dados.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "csv-parse": "^6.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "openai": "^5.0.0"
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArboAlerta GO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🦟 ArboAlerta GO</h1>
+    <p>Monitoramento de Arboviroses em Goiás</p>
+</header>
+
+<main>
+    <section class="introducao">
+        <h2>Painel Epidemiológico</h2>
+        <p>Consulte os casos de dengue, zika e chikungunya por município.</p>
+    </section>
+
+    <section class="filtros">
+        <div>
+            <label for="municipio">Município</label>
+            <select id="municipio">
+                <option value="Todos">Todos os municípios</option>
+                <option value="Goiânia">Goiânia</option>
+                <option value="Anápolis">Anápolis</option>
+                <option value="Aparecida de Goiânia">
+                    Aparecida de Goiânia
+                </option>
+            </select>
+        </div>
+
+        <div>
+            <label for="doenca">Doença</label>
+            <select id="doenca">
+                <option value="Todas">Todas as doenças</option>
+                <option value="Dengue">Dengue</option>
+                <option value="Zika">Zika</option>
+                <option value="Chikungunya">Chikungunya</option>
+            </select>
+        </div>
+
+        <button id="consultar">Consultar casos</button>
+    </section>
+
+    <section class="indicadores">
+        <div class="card">
+            <h3>Casos atuais</h3>
+            <strong id="casosAtuais">0</strong>
+        </div>
+
+        <div class="card">
+            <h3>Casos anteriores</h3>
+            <strong id="casosAnteriores">0</strong>
+        </div>
+
+        <div class="card">
+            <h3>Variação</h3>
+            <strong id="variacao">0%</strong>
+        </div>
+
+        <div class="card">
+            <h3>Municípios analisados</h3>
+            <strong id="totalMunicipios">0</strong>
+        </div>
+    </section>
+
+    <section class="painel">
+        <h2>Resultado da consulta</h2>
+        <div id="resultado">
+            Selecione os filtros e clique em Consultar casos.
+        </div>
+    </section>
+
+    <section class="painel">
+        <h2>Comparação de casos</h2>
+
+        <div class="legenda">
+            <span>🩶 Casos anteriores</span>
+            <span>🟢 Casos atuais</span>
+        </div>
+
+        <canvas id="grafico"></canvas>
+    </section>
+
+</main>
+
+<footer>
+    ArboAlerta GO - Protótipo demonstrativo de saúde pública
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
